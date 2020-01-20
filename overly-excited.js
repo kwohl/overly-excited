@@ -25,29 +25,48 @@
 
 
 //part 2 (Some words are more exciting than others)
+// let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
+
+// function addExcitement (theWordArray) {
+//     let buildMeUp = ""
+
+//     for (let i = 0; i < theWordArray.length; i++) {
+//         /*
+//             If the current word's place (not index) in the array
+//             is evenly divisible by 3, add an exclamation point
+//             to the end of the word and then concatenate it to
+//             `buildMeUp`.
+
+//             Otherwise, just concatenate the word itself.
+//          */
+//         if ((i+1) % 3 === 0) {
+//             buildMeUp = buildMeUp + " " + theWordArray[i] + "!";
+//         } else {
+//             buildMeUp = buildMeUp + " " + theWordArray[i];
+//         }
+//         console.log(buildMeUp);
+//         // Print buildMeUp to the console
+//     }
+
+// }
+
+// addExcitement(sentence)
+
+//part 3 (function arguments)
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
-function addExcitement (theWordArray) {
+function addExcitement (theWordArray, punctuation) {
     let buildMeUp = ""
 
     for (let i = 0; i < theWordArray.length; i++) {
-        /*
-            If the current word's place (not index) in the array
-            is evenly divisible by 3, add an exclamation point
-            to the end of the word and then concatenate it to
-            `buildMeUp`.
-
-            Otherwise, just concatenate the word itself.
-         */
         if ((i+1) % 3 === 0) {
-            buildMeUp = buildMeUp + " " + theWordArray[i] + "!";
+            buildMeUp = buildMeUp + " " + theWordArray[i] + punctuation;
         } else {
             buildMeUp = buildMeUp + " " + theWordArray[i];
         }
         console.log(buildMeUp);
-        // Print buildMeUp to the console
     }
-
 }
 
-addExcitement(sentence)
+// I want to use a question mark
+addExcitement(sentence, "?")
